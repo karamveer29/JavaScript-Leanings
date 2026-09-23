@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starter | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header data-animate="fade-down">
+      <h1>Karamveer Sandhu</h1>
+      <p>Data Science Enthusiast | Web Developer |</p>
+      <!-- 🌙 Theme Toggle Button -->
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle Theme">
+        🌙
+      </button>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="about" data-animate="slide-left">
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm Karamveer Sandhu, a B.Tech graduate passionate about AI, Web
+        Development, and Data Science. I love solving problems and building
+        smart applications that help people.
+      </p>
+    </section>
+
+    <section id="projects" data-animate="fade-up">
+      <h2>Projects</h2>
+      <div class="project" data-animate="zoom-in">
+        <h3>>A Netflix Clone</h3>
+        <p>
+          Developed a Netflix clone with HTML, CSS, and JavaScript, replicating
+          the interface and features of the original Netflix site.
+        </p>
+      </div>
+      <div class="project" data-animate="zoom-in">
+        <h3>Jarvis Desktop Assistant</h3>
+        <p>
+          Built a voice-based assistant capable of handling operational
+          commands. Demonstrated automation, task scheduling, and replying to
+          commands, opening websites, sending emails, reporting date/time,
+          playing music, etc.
+        </p>
+      </div>
+      <div class="project" data-animate="zoom-in">
+        <h3>Commercial Store Analytics</h3>
+        <p>
+          Performed sales data analysis to identify efficiency patterns
+          experience that translates to industrial data analytics and
+          performance monitoring.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" data-animate="fade-up">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="formStatus"></p>
+    </section>
+
+    <footer data-animate="fade-up">
+      <p>© 2025 Karamveer Sandhu | All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #222;
+    line-height: 1.6;
+}
+
+
+header {
+    background: linear-gradient(135deg, #0078ff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+header:hover {
+    transform: scale(1.01);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: white;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #0078ff;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #0078ff;
+    display: block;
+    margin: 0.5rem auto;
+    border-radius: 2px;
+}
+
+
+.project {
+    background: white;
+    padding: 1.8rem;
+    margin: 1.5rem auto;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+.project h3 {
+    color: #333;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.project p {
+    color: #555;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+form input,
+form textarea {
+    width: 80%;
+    max-width: 500px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+    box-shadow: 0 4px 20px rgba(0,120,255,0.3);
+}
+
+form textarea {
+    height: 120px;
+    resize: none;
+}
+
+form button {
+    background: linear-gradient(135deg, #0078ff, #00c6ff);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 20px rgba(0,120,255,0.3);
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #005fcc, #0099ff);
+    transform: translateY(-3px);
+}
+
+#formStatus {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #0078ff;
+}
+
+
+footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+
+    .project {
+        width: 95%;
+    }
+
+    form input,
+    form textarea {
+        width: 90%;
+    }
+}
+
+/* 🌙 THEME TOGGLE BUTTON */
+.theme-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.theme-btn:hover {
+    background: rgba(255,255,255,0.35);
+    transform: rotate(20deg);
+}
+
+/* 🌑 DARK THEME STYLES */
+body.dark-mode {
+    background: linear-gradient(135deg, #1a1a1a, #222);
+    color: #f5f5f5;
+}
+
+/* Header and footer */
+body.dark-mode header {
+    background: linear-gradient(135deg, #333, #111);
+    box-shadow: 0 4px 20px rgba(255,255,255,0.1);
+}
+
+body.dark-mode footer {
+    background: #111;
+    color: #aaa;
+}
+
+/* Cards and projects */
+body.dark-mode .project {
+    background: #443e3e;
+    color: #f0f0f0;
+    box-shadow: 0 8px 25px rgba(255,255,255,0.05);
+}
+
+/* Links and buttons */
+body.dark-mode nav a {
+    color: #fff;
+}
+
+body.dark-mode form button {
+    background: linear-gradient(135deg, #00c6ff, #0078ff);
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background: #333;
+    color: #fff;
+    border: 1px solid #332f2f;
+}
+
+/* Adjust form focus glow in dark mode */
+body.dark-mode input:focus,
+body.dark-mode textarea:focus {
+    box-shadow: 0 4px 20px rgba(0,200,255,0.3);
+}
+

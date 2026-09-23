@@ -1,0 +1,18 @@
+table, th, td{
+    border:  2px solid #212121;
+}
+.project{
+    background-color: #323232;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100px;
+
+}
+.color{
+    color: aqua;
+    display: flex;
+    flex-direction: row;
+}
